@@ -19,16 +19,6 @@
 }
 
 @font-face {
-  font-family: 'Gilroy ExtraBold';
-  src: url('../../fonts/Gilroy-ExtraBold.eot');
-  src: url('../../fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/Gilroy-ExtraBold.woff') format('woff'),
-  url('../../fonts/Gilroy-ExtraBold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'Gilroy Medium';
   src: url('../../fonts/Gilroy-Medium.eot');
   src: url('../../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
@@ -79,7 +69,6 @@
     font-weight: 300;
     letter-spacing: 0.02em;
     color: #000000;
-    text-align: center;
     white-space: pre;
   }
   &__icon {
@@ -101,9 +90,12 @@
     font-size: 23px;
     line-height: 23px;
     font-weight: 700;
-    text-decoration: underline;
+    text-decoration: none;
     letter-spacing: 0.02em;
     color: #000000;
+    &:hover{
+      color: #47a9af;
+    }
   }
   &__call {
     background-image: linear-gradient(0.0deg, #023232 0%, #49aab0 100%);
@@ -116,6 +108,9 @@
     color: #47a9af;
     -webkit-background-clip: text;
     text-align: center;
+    &:hover{
+      color: #000;
+    }
   }
   &__info {
     width: 67%;
@@ -129,8 +124,6 @@
     font-weight: 700;
     letter-spacing: 0.02em;
     color: #000000;
-    //width: 93%;
-    //margin-bottom: 50px;
     white-space: pre;
     &--blue {
       color: #0b8481;
@@ -157,7 +150,6 @@
     width: 73%;
   }
   &__item {
-  //  width: 38%;
     white-space: pre;
     align-items: center;
   }
@@ -189,7 +181,7 @@
     background-image: linear-gradient(88.0deg, #ed3b57 0%, #eb6f82 99%);
     border-radius: 0 10px 10px 0;
     font-family: 'Gilroy Bold', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -199,6 +191,13 @@
     text-align: center;
     box-sizing: border-box;
     height: 84px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+   &:hover{
+  box-shadow: 5px 3px 7px #ed3b57;
+   }
   }
   &__wrap {
     width: 33%;
@@ -217,8 +216,9 @@
   }
   &__image {
     position: absolute;
-    left: -28%;
-    bottom: 8%;
+    left: -40%;
+    bottom: 7%;
+
 
   }
   &__hidden {
@@ -235,6 +235,14 @@
     border-radius: 10px;
     background: url("../../img/modal-bg.png") no-repeat;
     background-size: cover;
+  }
+  &__band{
+    width: 60%;
+  }
+  &__percent{
+    position: absolute;
+    bottom: 0;
+    left: 34%;
   }
 }
 .modal{
@@ -288,6 +296,9 @@
     width: 29%;
     text-decoration: none;
     text-align: center;
+    &:hover{
+      box-shadow: 5px 3px 7px #ed3b57;
+    }
   }
   &__link{
     font-family: 'Gilroy Bold',sans-serif;
@@ -300,13 +311,18 @@
     position: relative;
     text-decoration: none;
     align-items: center;
+    margin: 0 0 0 auto;
+    width: fit-content;
     &:after{
       content: "";
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 34%;
+      width: 100%;
       border-bottom: 1px solid #023232;
+    }
+    &:hover:after{
+      border: none;
     }
   }
   &__logo{
@@ -340,6 +356,9 @@
     border: none;
     width: 249px;
     height: 58px;
+    &:hover{
+      box-shadow: 5px 3px 7px #ed3b57;
+    }
   }
   &__text{
     width: 55%;
@@ -353,10 +372,7 @@
 }
 @media screen and (max-width: 1400px){
   .content__image {
-    left: -16%;
-  }
-  .content__band{
-    width: 70%;
+    left: -37%;
   }
   .content__list {
     width: 90%;
@@ -376,8 +392,8 @@
     width: 60%;
   }
   .content__image {
-    left: -23%;
-    bottom: 5%;
+    left: -50%;
+    bottom: 10%;
   }
   .content__photo {
     width: 75%;
@@ -417,10 +433,12 @@
     align-items: center;
   }
   .content__image {
-    width: 61%;
+    left: -57%;
+    bottom: 0;
   }
   .content__button {
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 20px;
   }
 
   .content__input {
@@ -506,12 +524,14 @@
 
 
   .content__image {
-    margin: 0;
-    width: 24%;
-    left: 69%;
-    bottom: 0;
+    width: 35%;
+    left: 60%;
   }
-
+  .content__percent {
+    bottom: 7%;
+    left: 58%;
+    width: 27%;
+  }
 
   .content__photo {
     width: 43%;
@@ -560,6 +580,19 @@
   .content__wrapper {
     width: 50%;
   }
+  .modal__input{
+    width: 80%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .modal__form{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .modal__button{
+    border-radius: 10px;
+    width: 45%;
+  }
 }
 @media screen and (max-width: 576px){
 
@@ -575,7 +608,7 @@
     font-size: 16px;
   }
   .modal__button {
-     width: 48%;
+     width: 50%;
    }
   .content__text {
     font-size: 15px;
@@ -585,5 +618,11 @@
   }
   .content__text {
     font-size: 12px;
+  }
+  .content__telephone {
+    text-decoration: underline;
+  }
+  .modal__link {
+    font-size: 19px;
   }
 }
