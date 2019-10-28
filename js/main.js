@@ -14,7 +14,7 @@ $(".thank__button").on("click",function () {
 });
 $(document).mouseleave(function(e){
     if (e.clientY < 10) {
-        $('.content').magnificPopup({
+        $('.js-leaves').magnificPopup({
             items: {
                 src: '#leaves',
                 type: 'inline'
